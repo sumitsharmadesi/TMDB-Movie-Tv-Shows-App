@@ -24,4 +24,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "TMDB Movie Shows Explorer"
 include(":app")
- 
+include(":features:home")
+include(":core:common")
+include(":core:network")
+include(":core:database")
+include(":data:repository")
+include(":domain")
