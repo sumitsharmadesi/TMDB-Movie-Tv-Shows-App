@@ -121,6 +121,7 @@ hilt-compiler = {module = "com.google.dagger:hilt-compiler",version.ref = "hilt"
 
 paging-compose = {module = "androidx.paging:paging-compose",version.ref = "pagingCompose"}
 paging-common={ module="androidx.paging:paging-common", version.ref="pagingCompose"}
+paging-runtime={ module="androidx.paging:paging-runtime",version.ref="pagingCompose"}
 
 #Coroutines
 kotlinx-coroutines-core={ module="org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref="coroutines"}

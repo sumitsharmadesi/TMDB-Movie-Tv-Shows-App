@@ -23,7 +23,13 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.sumit.home.HomeViewModel
+import com.sumit.movies.MoviesViewModel
+import com.sumit.people.PeopleViewModel
 import com.sumit.tmdbmovieshowsexplorer.ui.HomeSceen
+import com.sumit.tmdbmovieshowsexplorer.ui.MoviesScreen
+import com.sumit.tmdbmovieshowsexplorer.ui.PeopleScreen
+import com.sumit.tmdbmovieshowsexplorer.ui.TvScreen
+import com.sumit.tv.TvViewModel
 
 @Composable
 fun AppNavigation() {
@@ -81,6 +87,15 @@ fun AppNavigation() {
         ) {
             composable("home") {
                 HomeSceen(nav, hiltViewModel<HomeViewModel>())
+            }
+            composable("movies") {
+                MoviesScreen(nav,hiltViewModel<MoviesViewModel>())
+            }
+            composable("tv") {
+                TvScreen(nav,hiltViewModel<TvViewModel>())
+            }
+            composable("people") {
+                PeopleScreen(nav,hiltViewModel<PeopleViewModel>())
             }
         }
     }

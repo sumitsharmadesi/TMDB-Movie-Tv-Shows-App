@@ -69,4 +69,8 @@ dependencies {
     implementation(project(":core:common"))
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
+    implementation(project(":features:movies"))
+    implementation(project(":features:tv"))
+    implementation(project(":features:people"))
+    implementation(libs.paging.compose)
 }

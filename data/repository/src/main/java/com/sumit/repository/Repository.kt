@@ -205,7 +205,7 @@ class Repository @Inject constructor(private val api: TmdbApi) : TMDBRepository 
             })
     }
 
-    override suspend fun search(q: String) = api.search(q).results.map {
+    override suspend fun search(query: String) = api.search(query).results.map {
         MediaItem(
             it.id,
             it.title ?: it.name.orEmpty(),
