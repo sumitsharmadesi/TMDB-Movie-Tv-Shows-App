@@ -17,9 +17,13 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.sumit.home.HomeViewModel
+import com.sumit.tmdbmovieshowsexplorer.ui.HomeSceen
 
 @Composable
 fun AppNavigation() {
@@ -39,10 +43,10 @@ fun AppNavigation() {
                 NavigationBar {
                     listOf(
                         "home" to Icons.Default.Home,
-                        "moview" to Icons.Default.Movie,
+                        "movies" to Icons.Default.Movie,
                         "tv" to Icons.Default.Tv,
                         "people" to Icons.Default.Person,
-                        "serach" to Icons.Default.Search
+                        "search" to Icons.Default.Search
                     ).forEach { (r,i)->
                         NavigationBarItem(
                             selected = currentDestination?.route ==r,
@@ -74,6 +78,10 @@ fun AppNavigation() {
             navController =nav,
             startDestination = "home",
             modifier = Modifier.padding(padding)
-        ) { }
+        ) {
+            composable("home") {
+                HomeSceen(nav, hiltViewModel<HomeViewModel>())
+            }
+        }
     }
 }

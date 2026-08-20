@@ -64,4 +64,9 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
+    implementation(project(":features:home"))
+    implementation(project(":domain"))
+    implementation(project(":core:common"))
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
 }

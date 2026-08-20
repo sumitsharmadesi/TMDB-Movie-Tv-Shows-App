@@ -6,7 +6,7 @@ ksp = "2.2.21-2.0.4"
 hilt = "2.57.1"
 
 # AndroidX
-coreKtx = "1.19.0"
+coreKtx = "1.18.0"
 appcompat = "1.7.1"
 
 # Testing
@@ -149,7 +149,7 @@ retrofit-convertor-moshi={ module="com.squareup.retrofit2:converter-moshi", vers
 
 # OkHTTP
 okhttp={ module="com.squareup.okhttp3:okhttp", version.ref="okhttp"}
-okhttp-logging-interceptor={ module="com.sqaureup.okhttp3:logging-interceptor",version.ref="okhttp"}
+okhttp-logging-interceptor={ module="com.squareup.okhttp3:logging-interceptor",version.ref="okhttp"}
 
 # Moshi
 moshi-kotlin={ module="com.squareup.moshi:moshi-kotlin", version.ref="moshi"}

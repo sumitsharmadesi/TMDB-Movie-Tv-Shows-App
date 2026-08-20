@@ -8,6 +8,7 @@ import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import javax.inject.Singleton
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
@@ -20,7 +21,8 @@ object NetworkModule{
         val u = c.request().url.newBuilder().addQueryParameter("api_key",BuildConfig.TMDB_API_KEY)
             .addQueryParameter("language","en-US").build()
         c.proceed(c.request().newBuilder().url(u).build())
-    }.retryOnConnectionFailure(true).build()
+    }.addInterceptor(HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY })
+        .retryOnConnectionFailure(true).build()
 
     @Provides
     @Singleton
