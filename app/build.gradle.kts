@@ -72,5 +72,7 @@ dependencies {
     implementation(project(":features:movies"))
     implementation(project(":features:tv"))
     implementation(project(":features:people"))
+    implementation(project(":features:search"))
+    implementation(project(":features:details"))
     implementation(libs.paging.compose)
 }
