@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -36,6 +37,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
 }
 
 dependencies {
@@ -60,4 +64,15 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
+    implementation(project(":features:home"))
+    implementation(project(":domain"))
+    implementation(project(":core:common"))
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
+    implementation(project(":features:movies"))
+    implementation(project(":features:tv"))
+    implementation(project(":features:people"))
+    implementation(project(":features:search"))
+    implementation(project(":features:details"))
+    implementation(libs.paging.compose)
 }

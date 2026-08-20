@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TMDB Movie Shows Explorer</string>
+    <string name="title_feature">features</string>
 </resources>

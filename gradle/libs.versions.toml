@@ -6,7 +6,7 @@ ksp = "2.2.21-2.0.4"
 hilt = "2.57.1"
 
 # AndroidX
-coreKtx = "1.19.0"
+coreKtx = "1.18.0"
 appcompat = "1.7.1"
 
 # Testing
@@ -30,11 +30,27 @@ hiltNavigationCompose = "1.2.0"
 # Paging
 pagingCompose = "3.3.6"
 
+#coroutines
+coroutines="1.10.2"
+lifecycle="2.9.3"
+
+#Room
+room="2.7.2"
+datastore="1.1.7"
+
+#Retrofit
+retrofit="3.0.0"
+okhttp="5.1.0"
+moshi="1.15.2"
+
 # Coil
 coil = "3.3.0"
 
 # Debug
 leakcanary = "2.14"
+runner = "1.0.2"
+espressoCoreVersion = "3.0.2"
+appcompatV7 = "28.0.0"
 
 
 [libraries]
@@ -104,6 +120,12 @@ hilt-compiler = {module = "com.google.dagger:hilt-compiler",version.ref = "hilt"
 # =========================
 
 paging-compose = {module = "androidx.paging:paging-compose",version.ref = "pagingCompose"}
+paging-common={ module="androidx.paging:paging-common", version.ref="pagingCompose"}
+paging-runtime={ module="androidx.paging:paging-runtime",version.ref="pagingCompose"}
+
+#Coroutines
+kotlinx-coroutines-core={ module="org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref="coroutines"}
+lifecycle-viewmodel-ktx={ module="androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref="lifecycle"}
 
 
 # =========================
@@ -114,12 +136,33 @@ coil-compose = {module = "io.coil-kt.coil3:coil-compose",version.ref = "coil"}
 
 coil-network-okhttp = {module = "io.coil-kt.coil3:coil-network-okhttp",version.ref = "coil"}
 
+# ROOM Database
+room-runtime={ module="androidx.room:room-runtime", version.ref="room"}
+room-ktx={ module="androidx.room:room-ktx", version.ref="room"}
+room-compiler={ module="androidx.room:room-compiler", version.ref="room"}
+
+#DataStore
+datastore-preferences={ module="androidx.datastore:datastore-preferences", version.ref="datastore"}
+
+#Retrofit
+retrofit={ module="com.squareup.retrofit2:retrofit", version.ref="retrofit"}
+retrofit-convertor-moshi={ module="com.squareup.retrofit2:converter-moshi", version.ref="retrofit"}
+
+# OkHTTP
+okhttp={ module="com.squareup.okhttp3:okhttp", version.ref="okhttp"}
+okhttp-logging-interceptor={ module="com.squareup.okhttp3:logging-interceptor",version.ref="okhttp"}
+
+# Moshi
+moshi-kotlin={ module="com.squareup.moshi:moshi-kotlin", version.ref="moshi"}
 
 # =========================
 # Debug
 # =========================
 
 leakcanary = {module = "com.squareup.leakcanary:leakcanary-android",version.ref = "leakcanary"}
+runner = { group = "com.android.support.test", name = "runner", version.ref = "runner" }
+espresso-core = { group = "com.android.support.test.espresso", name = "espresso-core", version.ref = "espressoCoreVersion" }
+appcompat-v7 = { group = "com.android.support", name = "appcompat-v7", version.ref = "appcompatV7" }
 
 
 [plugins]
@@ -154,3 +197,4 @@ ksp = {id = "com.google.devtools.ksp",version.ref = "ksp"}
 # =========================
 
 hilt = {id = "com.google.dagger.hilt.android",version.ref = "hilt"}
+android-dynamic-feature = { id = "com.android.dynamic-feature", version.ref = "agp" }
