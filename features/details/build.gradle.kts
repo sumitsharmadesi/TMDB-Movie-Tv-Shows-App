@@ -43,4 +43,7 @@ dependencies {
     implementation(libs.paging.runtime)
     implementation(project(":domain"))
     implementation(project(":data:repository"))
+    testImplementation(libs.turbine)
+    testImplementation(libs.mockk)
+    testImplementation(libs.kotlinx.coroutines.test)
 }
