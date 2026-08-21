@@ -14,7 +14,9 @@ import javax.inject.Singleton
 object DataBaseModule {
     @Provides
     @Singleton
-    fun db(@ApplicationContext c: Context) = Room.databaseBuilder(c, AppDatabase::class.java,"tmdb.db").build()
+    fun db(@ApplicationContext c: Context) = Room.databaseBuilder(c, AppDatabase::class.java,"tmdb.db")
+        .fallbackToDestructiveMigration()
+        .build()
 
     @Provides
     fun dao(database: AppDatabase) = database.movieDao()
