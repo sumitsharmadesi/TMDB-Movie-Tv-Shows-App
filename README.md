@@ -1,7 +1,8 @@
 # TMDB-Movie-Tv-Shows-App
 This project is intentionally multi-module. The original assessment asks for Clean Architecture and says multi-module is a plus; this implementation makes networking, database, domain, repository and each major feature independent modules.
-##Screenshots
 
+
+## Screenshots
 
 <img src="screenshots/Screenshot_1.jpg" width="300" height="400" alt="App Screenshots 1">
 <img src="screenshots/Screenshot_2.jpg" width="300" height="400" alt="App Screenshots 2">
