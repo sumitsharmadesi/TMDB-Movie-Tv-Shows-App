@@ -1,6 +1,9 @@
 # TMDB-Movie-Tv-Shows-App
 This project is intentionally multi-module. The original assessment asks for Clean Architecture and says multi-module is a plus; this implementation makes networking, database, domain, repository and each major feature independent modules.
-
+##Screenshots
+![Screenshot_1.jpg](screenshots/Screenshot_1.jpg)
+![Screenshot_2.jpg](screenshots/Screenshot_2.jpg)![Screenshot_3.jpg](screenshots/Screenshot_3.jpg)
+![Screenshot_4.jpg](screenshots/Screenshot_4.jpg)
 ## Modules
 
 - `:app` — application shell, Activity, navigation and Compose UI composition.
