@@ -7,6 +7,7 @@ This project is intentionally multi-module. The original assessment asks for Cle
 <img src="screenshots/Screenshot_2.jpg" width="300" height="400" alt="App Screenshots 2">
 <img src="screenshots/Screenshot_3.jpg" width="300" height="400" alt="App Screenshots 3">
 <img src="screenshots/Screenshot_4.jpg" width="300" height="400" alt="App Screenshots 4">
+
 ## Modules
 
 - `:app` — application shell, Activity, navigation and Compose UI composition.
