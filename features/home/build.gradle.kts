@@ -39,4 +39,8 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
     implementation(project(":domain"))
     implementation(project(":data:repository"))
+    testImplementation(libs.turbine)
+    testImplementation(libs.mockk)
+    testImplementation(libs.kotlinx.coroutines.test)
+    implementation(libs.paging.common)
 }
